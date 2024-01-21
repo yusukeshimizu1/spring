@@ -12,7 +12,7 @@ CREATE TABLE `diary` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
 
-## Overview
+## How to Start
 当プロジェクトを「Spring Boot App」で起動後、Reactプロジェクトを起動する
 
 React上でデータ改廃を行うと、当プロジェクトが呼び出される
