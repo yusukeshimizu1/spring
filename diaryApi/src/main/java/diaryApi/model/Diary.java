@@ -23,6 +23,7 @@ public class Diary {
 	private Long id;
 	private String title;
 	private String content;
+	private Integer conditionType;
 	private LocalDateTime createDatetime;
-	private LocalDateTime updateDateTime;
+	private LocalDateTime updateDatetime;
 }

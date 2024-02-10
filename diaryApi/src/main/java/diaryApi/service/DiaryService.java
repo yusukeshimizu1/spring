@@ -30,13 +30,13 @@ public class DiaryService {
 	
 	public void addDiary(Diary diary) {
 		diary.setCreateDatetime(LocalDateTime.now());
-		diary.setUpdateDateTime(LocalDateTime.now());
+		diary.setUpdateDatetime(LocalDateTime.now());
 		diaryRepository.save(diary);
 	}
 	
 	public void updateDiary(Long id, Diary diary) {
 		if(diaryRepository.findById(id).get() != null) {
-			diary.setUpdateDateTime(LocalDateTime.now());
+			diary.setUpdateDatetime(LocalDateTime.now());
 			diaryRepository.save(diary);
 		}
 	}
