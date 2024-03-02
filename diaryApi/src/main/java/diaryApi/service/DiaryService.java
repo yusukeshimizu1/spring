@@ -19,8 +19,7 @@ public class DiaryService {
 	
 		
 	public List<Diary> getAllDiaries(){
-		List<Diary> allDiaries = new ArrayList<>();
-		diaryRepository.findAllByOrderByIdDesc().forEach(allDiaries::add);
+		List<Diary> allDiaries = diaryRepository.findAllByOrderByIdDesc();
 		return allDiaries;
 	}
 	
@@ -35,7 +34,8 @@ public class DiaryService {
 	}
 	
 	public void updateDiary(Long id, Diary diary) {
-		if(diaryRepository.findById(id).get() != null) {
+		Optional<Diary> hogeOpt = Optional.ofNullable(diaryRepository.findById(id).get());
+		if (hogeOpt.isPresent()) {
 			diary.setUpdateDatetime(LocalDateTime.now());
 			diaryRepository.save(diary);
 		}
